@@ -1,0 +1,293 @@
+﻿<html dir=rtl>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/snowfall.css">
+    <link  type="text/css" href="type.css" rel="stylesheet" >
+    <script>
+
+    function mouseDown()
+    {
+        document.getElementById("p1").style.color = "magenta";
+    }
+
+    function mouseUp()
+    {
+        document.getElementById("p1").style.color = "green";
+    }
+
+    function mouseOut()
+    {
+        document.getElementById("p1").style.color = "black";
+    }
+
+</script>
+    <style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-image: url('img/img.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+#div1 {
+      animation-timing-function: linear;
+      position: relative;
+      animation: mymove 0s infinite;
+  }
+
+  /* Standard syntax */
+  @keyframes mymove {
+      from {
+          right: 0px;
+      }
+
+      to {
+          left: 1865px;
+      }
+  }
+  </style>
+<script language="javascript" type="text/javascript">
+function scoring()
+{
+// איפוס מונה תשובות נכונות
+  var score=0;
+
+// מספר שאלות בחידון
+ var numOfQuestions=3;
+
+// משתנה לולאה
+  var i;
+
+// מערך התשובות הנכונות
+  var answers=new Array();
+
+//checked לחצן שנלחץ מקבל ערך "אמת" במאפיין
+//לחצני הרדיו מסודרים כאיברים של מערך(ans0/1)
+
+// הצבת התשובות הנכונות במערך
+//התשובה הנכונה לשאלה הראשונה היא האפשרות הראשונה(0) מתוך ה-3, התשובה  הנכונה לשאלה השנייה היא האפשרות השנייה (1) מתוך ה-3
+  answers[0]=document.frm.ans0[0].checked;
+  answers[1]=document.frm.ans1[1].checked;
+  answers[2]=document.frm.ans2[0].checked;
+  answers[3]=document.frm.ans3[2].checked;
+  answers[4]=document.frm.ans4[1].checked;
+  answers[5]=document.frm.ans5[0].checked;
+  answers[6]=document.frm.ans6[0].checked;
+  answers[7]=document.frm.ans7[2].checked;
+  answers[8]=document.frm.ans8[1].checked;
+  answers[9]=document.frm.ans9[1].checked;
+
+// לחצני הרמיו מסודרים כאיברים של מערך
+//סריקת מערך התשובות על ידי לולאה מ-0 עד לתשובה האחרונה, אם התשובה נכונה מגדילים את מונה התשובות הנכונות ב-1
+  for(i=0; i<numOfQuestions; i++)
+    if (answers[i]==true)
+       score++;
+// חישוב הניקוד לפי מספר השאלות בחידון, בהנחה  שכל השאלות שוות בערכן
+  var totalScore =score* (100/numOfQuestions);
+ // alert ("הניקוד שלך הינו:" +  totalScore);
+
+//אם הציון נכשל ,לצבוע בצבע רקע אדום את התיבה שמציגה את הציון
+// אחרת בלבן
+if (totalScore<55)
+   document.frm.score1.style.backgroundColor = "red";
+else
+    document.frm.score1.style.backgroundColor = "green";
+
+// הצגת הניקוד בתיבת טקסט בסיום החידון
+  document.frm.score1.value= totalScore+ ":)";
+
+//   if (totalScore<55)
+//      alert("נכשלת");
+
+
+
+}
+</script>
+</head>
+
+   <body background="trivia\imk.jpg" text="black">
+    <br>
+
+  <p align="center" id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()" onmouseout="mouseOut()">
+
+    <b>
+    <u>
+    lets test you knowledge about italy
+    </u>
+    </b>
+
+  </p>
+  <div style="size: 200px;" align="left">
+
+   <img id="div1" width: 150px; height: 150px; src="trivia\count1.gif">
+
+
+
+    <br>
+
+<center>
+<form name="frm">
+
+?what is the capital city of italy? <br>
+     roma <input type="radio" name="ans0"/> <br>
+     milano <input type="radio" name="ans0"/> <br>
+     venice  <input type="radio" name="ans0"/>  <br>
+      <br><br><br>
+?how large is italy <br>
+     301,339 total sq. km <input type="radio" name="ans1"/> <br>
+     301,338 km <input type="radio" name="ans1"/>  <br>
+      685,447 total sq. km <input type="radio" name="ans1"/>  <br>
+      <br><br><br>
+
+ ?What is Italy's total populaton <br>
+     61,680,122<input type="radio" name="ans2"/> <br>
+
+ 61,980,182 <input type="radio" name="ans2"/>  <br>
+      67,680,124 <input type="radio" name="ans2"/>  <br>
+      <br><br><br>
+
+      ?Which Italian artist painted the Mona-Lisa <br>
+          gary barlow<input type="radio" name="ans3"/> <br>
+
+      picaso <input type="radio" name="ans3"/>  <br>
+          leonardo da vinci <input type="radio" name="ans3"/>  <br>
+           <br><br><br>
+
+           Which one of these answers say a name of an Italian football team?
+<br>
+                ab milan <input type="radio" name="ans4"/> <br>
+                ac milan <input type="radio" name="ans4"/> <br>
+                am milan  <input type="radio" name="ans4"/>  <br>
+                 <br><br><br>
+
+
+
+                 ?what is the 3 colors of italy flag <br>
+                     red,white,green<input type="radio" name="ans5"/> <br>
+
+                 purple,black,yellow <input type="radio" name="ans5"/>  <br>
+                    green,orange,grey <input type="radio" name="ans5"/>  <br>
+                      <br><br><br>
+
+
+
+                                    ? Which Italian car manufacturer sponsors a Formula One team <br>
+                                           ferrari<input type="radio" name="ans6"/> <br>
+
+                                       lambortghini <input type="radio" name="ans6"/>  <br>
+                                          fiat <input type="radio" name="ans6"/>  <br>
+                                            <br><br><br>
+
+                                            ?Who wrote the opera 'La Boheme' <br>
+                                                   rossini<input type="radio" name="ans7"/> <br>
+
+                                               verdi <input type="radio" name="ans7"/>  <br>
+                                                  puccini <input type="radio" name="ans7"/>  <br>
+                                                    <br><br><br>
+
+
+
+                                                    ?Which is the largest of the Italian lakes <br>
+                                                           como<input type="radio" name="ans8"/> <br>
+
+                                                       garda <input type="radio" name="ans8"/>  <br>
+                                                          lugano <input type="radio" name="ans8"/>  <br>
+                                                            <br><br><br>
+
+
+
+                                                            Does Italy smell of. <br>
+                                                                   tomato pasta<input type="radio" name="ans9"/> <br>
+
+                                                               cheese <input type="radio" name="ans9"/>  <br>
+                                                                  snails <input type="radio" name="ans9"/>  <br>
+                                                                    <br><br><br>
+
+
+
+
+resault
+  <br>
+  <input type="text" name="score1" dir="ltr" readonly/>
+
+
+  <p align="center">
+
+     <input type=reset value=clear>
+     <input type=button value=submit onclick=scoring()>
+  </p>
+  <br>
+  <br>
+  <marquee scrollamount="=2"
+      direction="left"
+      behavior="scroll">
+      <img src="trivia\thanks.png"  />
+      </marquee>
+
+</form>
+</center>
+<snowfall>
+  <!-- @link https://emojikopieren.de/ -->
+  <!-- Add inside the flakes, whatever you like. -->
+  <snowflake><span>❄</span>️️</snowflake>
+  <snowflake><span>🍂</span>️️</snowflake>
+  <snowflake><span>💝</span> ️️</snowflake>
+  <snowflake><span>🌟</span>️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+  <snowflake><img src="img/snowflake.png">️</snowflake>
+</snowfall>
+</body>
+</html>

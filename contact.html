@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="css/snowfall.css">
+    <link  type="text/css" href="type.css" rel="stylesheet" >
+    <style>
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			background-image: url('img/img.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+    
+
+        function isok(form) {
+            var passed = false;
+            if (form.name.value.length <2)
+            alert("Please enter your name");
+            else if(!(isNaN(form.name.value)))
+            alert("Please enter a correct name");
+                else if (form.email.value.indexOf("@") == -1)
+                     alert("Please enter correct email");
+                else if (form.email.value.indexOf(".") == -1)
+                     alert("Please enter correct email");
+                else if (form.reson.value == 0)
+                alert("Please select reson of contact");
+            else if (form.TextArea.value == "")
+                alert("Please Write your requestment");
+                else
+                passed = true;
+
+            return passed;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="PageStyle.css" />
+
+</head>
+<body background="BACKIMAGE2.png">
+    <snowfall>
+        <!-- @link https://emojikopieren.de/ -->
+        <!-- Add inside the flakes, whatever you like. -->
+        <snowflake><span>❄</span>️️</snowflake>
+        <snowflake><span>🍂</span>️️</snowflake>
+        <snowflake><span>💝</span> ️️</snowflake>
+        <snowflake><span>🌟</span>️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+        <snowflake><img src="img/snowflake.png">️</snowflake>
+    </snowfall>
+    <h1>Contact</h1>
+    <div class="content">
+        <form class="transbox" name="ContactForm" action="contact 2.html" onSubmit="return isok(ContactForm);">
+            <h3>contact info</h3>
+            Name: <br /><input name="name" type="text" placeholder="Write your name" /><br />
+            Email: <br /><input name="email" Text" type="text" placeholder="Write your email" /><br /><br />
+            <h3>Contact reason</h3>
+            Reason of contact: <br />
+            <select name="reason">
+                <option value="0"></option>
+                <option value="1">
+                    Report a Bug
+                </option>
+                <option value="2">
+                    Report News
+                </option>
+                <option value="3">
+                    Advert offer
+                </option>
+                <option value="4">
+                    Ask Question
+                </option>
+            </select>
+            <br /><br />
+            Writing area:<br />
+            <textarea name="TextArea" cols="45" rows="5" style="resize:none;" placeholder="Write here...."></textarea>
+            <br />
+            <input type="reset" value="Clear" style="border-radius:5px;font-size:18px;" />
+
+            <input type="submit" value="Send" style="border-radius:5px;font-size:18px;" />
+            </a>
+            <br />
+            <br />
+        </form>
+    </div>
+</body>

@@ -1,0 +1,294 @@
+﻿<html >
+<head>
+  <link  type="text/css" href="StyleSheet1.css" rel="stylesheet" >
+  <link  type="text/css" href="type.css" rel="stylesheet" >
+  <link rel="stylesheet" type="text/css" href="css/snowfall.css">
+  <style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-image: url('img/img.jpg');
+          background-size: cover;
+          background-attachment: fixed;
+      }
+
+  </style>
+  <center>
+       <h3>click on the button to see something intersting </h3>
+
+       <input type="button" id="btn" value="button">
+   </center>
+  <script>
+var x = document.getElementById("btn");
+x.addEventListener("click",FirstFunction);
+x.addEventListener("click", SecondFunction);
+
+function FirstFunction() {
+alert ("this is the most delecius food in");
+}
+
+function SecondFunction() {
+alert ("the world!");
+}
+  </script>
+    <title>italian food</title>
+  <link rel="StyleSheet"  type="text/css"/>
+  <script>
+    class Purchase {
+        constructor(fullname, mealnumber, amount,price)
+        {
+            this.setFullname = fullname;
+            this.setmealnumber = mealnumber;
+            this.setAmount = amount;
+            this.setPrice = price;
+        }
+        
+        set setFullname(fullname)
+        {
+            var checkFull = /^[a-z]{2,}[" "][a-z]{2,}$/;
+            if(checkFull.test(fullname))
+            {
+                this.fullname = fullname;
+            }
+            else
+            {
+                this.fullname = undefined;
+            }
+        }
+        set setmealnumber(mealnumber)
+        {
+            var checknum = /^[0-9]{6}$/;
+            if(checknum.test(mealnumber))
+            {
+                this.mealnumber = mealnumber;
+            }
+            else
+            {
+                this.mealnumber = 0;
+            }
+        }
+        set setAmount(amount)
+        {
+            this.amount = amount;
+        }
+        set setPrice(price)
+        {
+            this.price = price;
+        }
+        get getFullname()
+        {
+            return this.fullname;
+        }
+        get getmealnumber()
+        {
+            return this.mealnumber;
+        }
+        get getAmount()
+        {
+            return this.amount;
+        }
+        get getPrice()
+        {
+            return this.price;
+        }
+        get fullPrice()
+        {
+            return this.price*this.amount;
+        }
+        toString()
+        {
+            return "Thanks for the purchase \n"+"The full price is of your meals is "+this.fullPrice;
+        }
+    }
+    function checkPurchase()
+    {
+        var price = document.getElementById("price").innerHTML;
+        var fullname = document.getElementById("Purchase").elements[0].value;
+        var mealnumber = document.getElementById("Purchase").elements[1].value;
+        var amount = document.getElementById("Purchase").elements[2].value;
+        checkout = new Purchase(fullname,mealnumber,amount,price);
+        var fullPrice = checkout.fullPrice;
+        var thanks = checkout.toString;
+        if(checkout.getFullname==undefined && checkout.getmealnumber==0)
+        {
+            alert("One of the details you inserted is invalid. Please check again!")
+            return false;
+        }
+        else
+        {
+            alert(checkout.toString())
+        }
+
+    }
+</script>  
+</head>
+<body id="To Top">
+  <center>
+    <h1>the popular food in italy</h1>
+  </center>
+
+
+    <p>
+      <center>
+    <h2>pizza</h2>
+    <center/>
+        <center><img class="one" src="food/pizza.jpg" height="500" width="400" /></center>
+
+        <br>
+        <br>
+
+        <p>
+        In America pizza usually falls into two categories: thick and cheesy Chicago style or thin and more traditional New York pizza. In Italy pizza also falls into two distinct categories: Italian pizza and the rest of the world. It might seem silly considering the basic ingredients, but one taste of a true Italian pizza and that’s it. You will never feel the same about this simple and delicious food again.
+        <br>
+
+        <br>
+        <br>
+        <h2>passta</h2>
+    <center><img class="one" src="food/passta1.jpg" height="500" width="400" /></center>
+
+
+
+
+
+
+    <p>
+        <br />
+
+    <p>
+      Pasta consists of flour, water, salt and sometimes egg (for egg noodles). Over the centuries Italians invented a myriad of shapes and sauces to enhance the basically bland taste of pasta. Pasta in Italy is always served in small portions (90 grams uncooked) after the first appetizer.
+    </p>
+    <br />
+    <h2>gellato</h2>
+  <center><img class="one" src="food/gelato.jpg" height="500" width="400" /></center>
+    <p>
+        THE ITALIAN WORD CONGELATO MEANS FROZEN. ... Although gelato is the Italian version of ice cream, it's not merely Dreyer's with a European, artisanal flair. Like ice cream, gelato contains milk, sugar, and flavorings such as fruit or nuts, but it has less cream than ice cream and usually no egg yolks.
+        <br />
+        <br />
+        <br />
+        <div class="container">
+          <br>
+          <br>
+          <div class="container-contact">
+              <div class="title-contact">
+                  <h5>
+                      Enter meal order:
+                  </h5>
+              </div>
+              <form name="frm">
+                <center>
+                    <font style="color:brown " size="5">-:  Search by item name</font><br><br>
+                    <input type="text" name="itemID" style="color:brown ">
+                    <br><br>
+                    <input  style="background-color:wheat " type="button" value="Search"
+                         onclick="Search()">
+    
+                </center>
+            </form>
+            <form id="Purchase" onsubmit="return checkPurchase(Purchase)">
+                <label for="fname">Full name</label>
+                <input type="text" id="fname" name="fullname" placeholder="Full Name">
+                <label for="lname">meal number</label>
+                <input type="number" id="num" name="num" placeholder="meal number">
+                <label for="meal id">Number of meals</label>
+                <input type="number" id="productNum" name="productNum" placeholder="Amount">
+                <label id="price" for="productNum" >50</label>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <br>
+            <br>
+      </div>
+
+        <marquee scrollamount="10"
+        direction="left"
+        behavior="scroll">
+        <img src="food/giphy.gif"  />
+        </marquee>
+        
+
+        <snowfall>
+          <!-- @link https://emojikopieren.de/ -->
+          <!-- Add inside the flakes, whatever you like. -->
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          <snowflake><span>😋</span>️</snowflake>
+          </snowfall>
+
+
+
+          <p>
+            <script language="JavaScript" type="text/JavaScript">
+
+                function Search() {
+                    
+                    item = new Array('pizza','passta', 'gellato');
+                    
+
+                    if (frm.itemID.value ==  item[0] ||frm.itemID.value ==  item[1] ||frm.itemID.value ==  item[2]  )
+                        alert("prodact valid ");
+                    else
+                        alert("prodact is not valid ");
+
+                    return true;
+                    
+                }
+
+
+            </script>
+        </p>
+        <br><br>
+
+
+
+
+</body>
+</html>

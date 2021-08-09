@@ -1,0 +1,60 @@
+﻿
+body
+{
+background-color:green;
+line-height: 1.5;
+margin: 20px;
+}
+
+ h1 {
+color: #999999;
+font-family: arial, sans-serif;
+font-size: 16px;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 1px;
+}
+
+ h2
+ {
+
+	 color:red;
+	 text-decoration:underline;
+ }
+
+ img
+ {
+ 	 height:300px;
+	 weight:300px;
+
+ }
+
+ p
+ {
+
+	 font-size:20px;
+	 color:black;
+ }
+
+ a
+ {
+ 	 font-size:20px;
+ }
+ marquee{
+   height:300px;
+  weight:100px;
+
+ }
+.one {
+  width: 300px;
+  height: 300px;
+ 
+}
+
+.one:hover {
+  -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+      /* width: 400px;
+       height: 400px;*/
+}

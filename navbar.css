@@ -1,0 +1,33 @@
+﻿
+.navbar {
+display: block;
+background-color: rgb(33, 150, 4);
+cursor: pointer;
+transition: all 0.7s;
+height: 100%;
+width: 200px;
+position: fixed;
+z-index: 1; /*put the bar on top of all*/
+top: 0px;
+left: 0;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none; /*Remove Underling Of links*/
+  text-align: center;
+  font-size: 28px;
+  font-family: Arial;
+  font-weight: 800;
+  transition: 0.7s;
+}
+
+  .navbar a:hover {
+      background-color: #cf0d0dcb;
+      color: white;
+      padding: 14px 56px
+  }
+
+  
+ 
